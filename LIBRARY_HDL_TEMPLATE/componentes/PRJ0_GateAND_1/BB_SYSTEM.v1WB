@@ -1,0 +1,19 @@
+
+
+//
+
+///A=======================================================
+//  REG/WIRE declarations
+//=======================================================
+
+//=======================================================
+//  Structural coding
+//=======================================================
+CC_GateAND CC_GateAND_u0 (
+// port map - connection between master ports and signals/registers   
+	.CC_GateAND_z_Out(BB_SYSTEM_z_Out),
+	.CC_GateAND_a_In(BB_SYSTEM_a_In),
+	.CC_GateAND_b_In(BB_SYSTEM_b_In)
+);
+endmodule
+//=======================================================A/
