@@ -42,7 +42,14 @@ input 	[NUMBER_DATAWIDTH-1:0] CC_COMPARATOR_c1_InBUS;
 //=======================================================
 //  Structural coding
 //=======================================================
-always @(*)
+always @(*) begin
+
+	if (CC_COMPARATOR_c0_InBUS>CC_COMPARATOR_c1_InBUS) begin
+	CC_COMPARATOR_result_Out = 1;
+	end else begin
+	CC_COMPARATOR_result_Out = 0;
+	end
+end
 
 
 endmodule
