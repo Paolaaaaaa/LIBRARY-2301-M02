@@ -21,8 +21,8 @@ set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 6
 #============================================================
 # LED
 #============================================================
-set_location_assignment PIN_A15 -to BB_SYSTEM_y0_Out
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to BB_SYSTEM_y0_Out
+set_location_assignment PIN_A15 -to BB_SYSTEM_z_Out
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to BB_SYSTEM_z_Out
 #set_location_assignment PIN_A13 -to BB_SYSTEM_product_OutBUS[1]
 #set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to BB_SYSTEM_product_OutBUS[1]
 #set_location_assignment PIN_B13 -to BB_SYSTEM_product_OutBUS[2]
@@ -41,11 +41,11 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to BB_SYSTEM_y0_Out
 #============================================================
 # KEY
 #============================================================
-#set_location_assignment PIN_J15 -to BB_SYSTEM_a_In
-#set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to BB_SYSTEM_a_In
-#
-#set_location_assignment PIN_E1 -to BB_SYSTEM_b_In
-#set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to BB_SYSTEM_b_In
+set_location_assignment PIN_J15 -to BB_SYSTEM_a_In
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to BB_SYSTEM_a_In
+
+set_location_assignment PIN_E1 -to BB_SYSTEM_b_In
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to BB_SYSTEM_b_In
 
 #============================================================
 # SW
@@ -69,40 +69,36 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to BB_SYSTEM_y0_Out
 
 
 #GPIO_00
-set_location_assignment PIN_D3 -to BB_SYSTEM_t0_InBUS[0]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to BB_SYSTEM_t0_InBUS[0]
+#set_location_assignment PIN_D3 -to BB_SYSTEM_multiplier_InBUS[0]
+#set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to BB_SYSTEM_multiplier_InBUS[0]
 
 #GPIO_01
-set_location_assignment PIN_C3 -to BB_SYSTEM_x0_InBUS[1]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to BB_SYSTEM_x0_InBUS[1]
+#set_location_assignment PIN_C3 -to BB_SYSTEM_multiplier_InBUS[1]
+#set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to BB_SYSTEM_multiplier_InBUS[1]
 
 #GPIO_02
-set_location_assignment PIN_A2 -to CC_NEURON_w0_InBUS[2]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CC_NEURON_w0_InBUS[2]
+#set_location_assignment PIN_A2 -to BB_SYSTEM_multiplier_InBUS[2]
+#set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to BB_SYSTEM_multiplier_InBUS[2]
 
 #GPIO_03
-set_location_assignment PIN_A3 -to CC_NEURON_x1_InBUS[3]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CC_NEURON_x1_InBUS[3]
+#set_location_assignment PIN_A3 -to BB_SYSTEM_multiplier_InBUS[3]
+#set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to BB_SYSTEM_multiplier_InBUS[3]
 
 #GPIO_04
-set_location_assignment PIN_B3 -to CC_NEURON_w1_InBUS[4]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CC_NEURON_w1_InBUS[4]
+#set_location_assignment PIN_B3 -to BB_SYSTEM_multiplier_InBUS[4]
+#set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to BB_SYSTEM_multiplier_InBUS[4]
 
 #GPIO_05
-set_location_assignment PIN_B4 -to CC_NEURON_x2_InBUS[5]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CC_NEURON_x2_InBUS[5]
+#set_location_assignment PIN_B4 -to BB_SYSTEM_multiplier_InBUS[5]
+#set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to BB_SYSTEM_multiplier_InBUS[5]
 
 #GPIO_06
-set_location_assignment PIN_A4 -to CC_NEURON_w2_InBUS[6]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CC_NEURON_w2_InBUS[6]
+#set_location_assignment PIN_A4 -to BB_SYSTEM_multiplier_InBUS[6]
+#set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to BB_SYSTEM_multiplier_InBUS[6]
 
 #GPIO_07
-set_location_assignment PIN_B5 -to CC_NEURON_x3_InBUS[7]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CC_NEURON_x3_InBUS[7]
-
-#GPIO_07
-set_location_assignment PIN_B6 -to CC_NEURON_w3_InBUS[8]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CC_NEURON_w3_InBUS[8]
+#set_location_assignment PIN_B5 -to BB_SYSTEM_multiplier_InBUS[7]
+#set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to BB_SYSTEM_multiplier_InBUS[7]
 
 #set_location_assignment PIN_A5 -to BB_SYSTEM_eom_OutLow
 #set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to BB_SYSTEM_eom_OutLow

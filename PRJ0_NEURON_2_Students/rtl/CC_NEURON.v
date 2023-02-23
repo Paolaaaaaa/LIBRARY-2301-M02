@@ -40,7 +40,7 @@ parameter NUMBER_DATAWIDTH = 8;
 //  PORT declarations
 //=======================================================
 output 	CC_NEURON_y0_Out;
-input 	[NUMBER_DATAWIDTH-1:0] CC_NEURON_t0_InBUS;
+input 	[NUMBER_DATAWIDTH-1:0] CC_NEURON_t0_InBUS;//coeficiente o
 input 	[NUMBER_DATAWIDTH-1:0] CC_NEURON_x0_InBUS;
 input 	[NUMBER_DATAWIDTH-1:0] CC_NEURON_w0_InBUS;
 input 	[NUMBER_DATAWIDTH-1:0] CC_NEURON_x1_InBUS;
@@ -76,19 +76,26 @@ CC_MULTIPLIER CC_MULTIPLIER_u0 (
 
 CC_MULTIPLIER CC_MULTIPLIER_u1 (
 // port map - connection between master ports and signals/registers   
-
+	.CC_MULTIPLIER_product_Out(WIRE_multiplier_2_adder_cwireBUS_1),
+	.CC_MULTIPLIER_m0_InBUS(CC_NEURON_x1_InBUS),
+	.CC_MULTIPLIER_m1_InBUS(CC_NEURON_w1_InBUS)
 
 );
 
 CC_MULTIPLIER CC_MULTIPLIER_u2 (
 // port map - connection between master ports and signals/registers   
+	.CC_MULTIPLIER_product_Out(WIRE_multiplier_2_adder_cwireBUS_2),
+	.CC_MULTIPLIER_m0_InBUS(CC_NEURON_x2_InBUS),
+	.CC_MULTIPLIER_m1_InBUS(CC_NEURON_w2_InBUS)
 
 
 );
 
 CC_MULTIPLIER CC_MULTIPLIER_u3 (
 // port map - connection between master ports and signals/registers   
-
+	.CC_MULTIPLIER_product_Out(WIRE_multiplier_2_adder_cwireBUS_3),
+	.CC_MULTIPLIER_m0_InBUS(CC_NEURON_x3_InBUS),
+	.CC_MULTIPLIER_m1_InBUS(CC_NEURON_w3_InBUS)
 
 );
 
@@ -101,18 +108,26 @@ CC_ADDER CC_ADDER_u0 (
 
 CC_ADDER CC_ADDER_u1 (
 // port map - connection between master ports and signals/registers   
-
+	.CC_ADDER_sum_Out(WIRE_adder_2_adder_cwireBUS_1),
+	.CC_ADDER_a0_InBUS(WIRE_multiplier_2_adder_cwireBUS_2),
+	.CC_ADDER_a1_InBUS(WIRE_multiplier_2_adder_cwireBUS_3)
 
 );
 
 CC_ADDER CC_ADDER_u2 (
 // port map - connection between master ports and signals/registers   
+	.CC_ADDER_sum_Out(WIRE_adder_2_comparator_cwireBUS_0),
+	.CC_ADDER_a0_InBUS(WIRE_adder_2_adder_cwireBUS_1),
+	.CC_ADDER_a1_InBUS(WIRE_adder_2_adder_cwireBUS_0)
 
 
 );
 
 CC_COMPARATOR CC_COMPARATOR_u2 (
-// port map - connection between master ports and signals/registers   
+// port map - connection between master ports and signals/registers  
+	.CC_COMPARATOR_result_Out (CC_NEURON_y0_Out)
+	.CC_COMPARATOR_c0_InBUS(CC_NEURON_t0_InBUS)
+	.CC_COMPARATOR_c1_InBUS(WIRE_adder_2_comparator_cwireBUS_0)
 
 
 );
