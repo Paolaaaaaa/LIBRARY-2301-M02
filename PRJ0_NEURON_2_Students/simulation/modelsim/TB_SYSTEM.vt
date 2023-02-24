@@ -76,19 +76,14 @@ begin
 
 	#0 		TB_SYSTEM_t0_InBUS <= 40; TB_SYSTEM_x0_InBUS <= 1; TB_SYSTEM_w0_InBUS <= 1; TB_SYSTEM_x1_InBUS <= 2; TB_SYSTEM_w1_InBUS <= 2; TB_SYSTEM_x2_InBUS <= 3; TB_SYSTEM_w2_InBUS <= 3; TB_SYSTEM_x3_InBUS <= 4; TB_SYSTEM_w3_InBUS <= 4; // CHECK ??
 	
-	#20000	TB_SYSTEM_t0_InBUS <= 1; TB_SYSTEM_x0_InBUS <= 100; TB_SYSTEM_w0_InBUS <= 105; TB_SYSTEM_x1_InBUS <= 70; TB_SYSTEM_w1_InBUS <= 45; TB_SYSTEM_x2_InBUS <= 200; TB_SYSTEM_w2_InBUS <= 124; TB_SYSTEM_x3_InBUS <= 80; TB_SYSTEM_w3_InBUS <= 147; // CHECK ??
+	#20000	TB_SYSTEM_t0_InBUS <= 128; TB_SYSTEM_x0_InBUS <= 4; TB_SYSTEM_w0_InBUS <= 4; TB_SYSTEM_x1_InBUS <= 2; TB_SYSTEM_w1_InBUS <= 2; TB_SYSTEM_x2_InBUS <= 0; TB_SYSTEM_w2_InBUS <= 0; TB_SYSTEM_x3_InBUS <= 0; TB_SYSTEM_w3_InBUS <= 0; // CHECK ??
 	
-	#20000 		TB_SYSTEM_t0_InBUS <= 1; TB_SYSTEM_x0_InBUS <= 10; TB_SYSTEM_w0_InBUS <= 15; TB_SYSTEM_x1_InBUS <= 7; TB_SYSTEM_w1_InBUS <= 40; TB_SYSTEM_x2_InBUS <= 20; TB_SYSTEM_w2_InBUS <= 34; TB_SYSTEM_x3_InBUS <= 8; TB_SYSTEM_w3_InBUS <= 47; // CHECK ??
+	#20000	TB_SYSTEM_t0_InBUS <= 128; TB_SYSTEM_x0_InBUS <= 128; TB_SYSTEM_w0_InBUS <= 0; TB_SYSTEM_x1_InBUS <= 0; TB_SYSTEM_w1_InBUS <= 0; TB_SYSTEM_x2_InBUS <= 0; TB_SYSTEM_w2_InBUS <= 0; TB_SYSTEM_x3_InBUS <= 0; TB_SYSTEM_w3_InBUS <= 0; // CHECK ??
+
+	#20000 	TB_SYSTEM_t0_InBUS <= 100; TB_SYSTEM_x0_InBUS <= 1; TB_SYSTEM_w0_InBUS <= 1; TB_SYSTEM_x1_InBUS <= 1; TB_SYSTEM_w1_InBUS <= 1; TB_SYSTEM_x2_InBUS <= 1; TB_SYSTEM_w2_InBUS <= 1; TB_SYSTEM_x3_InBUS <= 1; TB_SYSTEM_w3_InBUS <= 1; // CHECK ??
 	
-	
-	for (ii=0; ii<10; ii=ii+1)
-		begin
-			TB_SYSTEM_t0_InBUS <= 5;
-			TB_SYSTEM_x0_InBUS <= 5;
-			TB_SYSTEM_w0_InBUS <= ii;
-			
-			#20000;
-	end
+	#20000 	TB_SYSTEM_t0_InBUS <= 0; TB_SYSTEM_x0_InBUS <= 0; TB_SYSTEM_w0_InBUS <= 0; TB_SYSTEM_x1_InBUS <= 0; TB_SYSTEM_w1_InBUS <= 0; TB_SYSTEM_x2_InBUS <= 0; TB_SYSTEM_w2_InBUS <= 0; TB_SYSTEM_x3_InBUS <= 0; TB_SYSTEM_w3_InBUS <= 0; // CHECK ??
+
 @eachvec;
 $finish;                                              
 // --> end                                             
